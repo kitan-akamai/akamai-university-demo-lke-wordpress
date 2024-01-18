@@ -115,7 +115,7 @@ This repository is a demonstration highlighting how developers can leverage the 
 
     <img src="docs/images/zaproxy_attack.png" alt="zaproxy attack" style="width:auto;height:auto;">
 
-    The strength of the open standards in facilitating web application development and the versatility of the Akamai Cloud Platform makes it well-suited for a wide range of software development requirements. Securing applications in Akamai Cloud is no different than in any other public cloud platform.
+    The strength of the open standards in facilitating web application development and the versatility of the Akamai Cloud Platform makes it well-suited for a wide range of software development requirements. Securing applications on Akamai Cloud is no different than in any other public cloud platform.
 
 ### Change persona to Network/System Security Engineer
 
@@ -161,7 +161,7 @@ This repository is a demonstration highlighting how developers can leverage the 
     kubectl apply -f ./disable-ssh.yml
     ```
    
-    Due to the Shared Responsibility Model in the Cloud, securing systems in Akamai Cloud is no different than in any other public cloud platform.
+    Due to the Shared Responsibility Model in the Cloud, securing systems on Akamai Cloud is no different than in any other public cloud platform.
 
 ## Disclaimer
 The deployment provided in this repository is minimal and intended for demonstration purposes only.
