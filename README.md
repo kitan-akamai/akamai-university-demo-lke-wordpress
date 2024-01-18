@@ -32,6 +32,8 @@ This repository is a demonstration highlighting how developers can leverage the 
 
 ## Demo Steps
 
+### Start as persona of Cloud Developer
+
 1. Clone this repository
    ```bash
    git clone https://github.com/kitan-akamai/akamai-university-demo-lke-wordpress.git
