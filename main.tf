@@ -23,8 +23,7 @@ resource "linode_lke_cluster" "wordpress-cluster" {
 
 resource "helm_release" "wordpress" {
   name       = var.helm_deployment_label
-  repository = "https://charts.bitnami.com/bitnami"
-  chart      = "wordpress"
+  chart      = "./helm-charts/wordpress"
   depends_on = [linode_lke_cluster.wordpress-cluster]
 }
 

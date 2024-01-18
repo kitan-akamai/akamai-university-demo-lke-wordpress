@@ -161,7 +161,7 @@ This repository is a demonstration highlighting how developers can leverage the 
 
 23. Investigate Nessus scan result
 
-    At the time of writing, Terrapin (CVE-2023-48795, identified on 18 December 2023) affecting SSH is detected as a medium-severity vulnerability. This is a common type of vulnerability across all public cloud platforms. Mitigation patches are available for addressing the vulnerability. However, as we leverage Kubernetes as the orchestration engine, access to worker nodes is not necessary. Turn off SSH by applying a daemonset via kubectl:
+    At the time of writing, Terrapin (CVE-2023-48795, identified on 18 December 2023) affecting SSH is detected as a medium-severity vulnerability. This is a common type of vulnerability across all public cloud platforms. Mitigation patches are available for addressing the vulnerability. However, as we leverage Kubernetes as the orchestration engine, there's no need to SSH into individual worker nodes. Host actions on every worker node can be executed via a daemonset. To disable SSH, apply the following daemonset:
 
     ```bash
     kubectl apply -f ./disable-ssh.yml
