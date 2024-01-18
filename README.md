@@ -39,6 +39,9 @@ This repository is a demonstration highlighting how developers can leverage the 
    ```
 
 2. Execute Terraform 
+
+   Review the Terraform script, designed to deploy a LKE cluster with three worker nodes and a Cluster Autoscaler configured to scale up to a maximum of 10 nodes. The script utilizes the Helm provider to  deploy containerized software packages (WordPress and MariaDB). In less than 30 lines, you can have a fully operational 3-tier application running on Kubernetes. Having an understanding of the APIs, you can extend the CI/CD integration from this point and seamlessly execute a full suite of DevOps tasks that are beyond the scope of this demo.
+
    ```bash
    export TF_VAR_linode_token="your-token-goes-here"
    terraform init
