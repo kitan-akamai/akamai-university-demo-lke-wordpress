@@ -61,6 +61,8 @@ This repository is a demonstration highlighting how developers can leverage the 
 
 4. Access the WordPress web application
 
+   <img src="docs/images/wordpress.png" alt="nessus_scan" style="width:auto;height:400px;">
+
 ### Change persona to Application Security
 
 5. Create a new Kali instance using Cloud Manager UI
@@ -143,6 +145,7 @@ This repository is a demonstration highlighting how developers can leverage the 
     ```bash
     dpkg -i Nessus-10.6.4-ubuntu1404_amd64.deb
     ```
+
 20. Start Nessus
     ```bash
     systemctl start nessusd
