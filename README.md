@@ -1,3 +1,4 @@
+<img src="docs/images/akamai.png" alt="Akamai" style="display: block; margin-left: auto; margin-right: auto; width:auto; height:auto;">
 # Akamai University Compute Demo 
 
 This repository is a demonstration highlighting how developers can leverage the core primitives of Akamai/Linode Cloud Platforms to seamlessly deploy cloud-native applications. Offering a glimpse into a day in the life of a software developer or cloud engineer, this demo covers key aspects such as app deployment, containerization, security, networking, Linode Cloud Manager, and Infrastructure-as-Code in less than 15 minutes hands-on session.
@@ -107,12 +108,14 @@ This repository is a demonstration highlighting how developers can leverage the 
     Use your favourite VNC viewer or using Finder.
 
 14. Open terminal in Kali, start zaproxy
+
     <img src="docs/images/zaproxy.png" alt="zaproxy" style="width:auto;height:auto;">
 
 15. Launch an automated scan attack against the WordPress application
+
     <img src="docs/images/zaproxy_attack.png" alt="zaproxy attack" style="width:auto;height:auto;">
 
-   The strength of the open standards in facilitating web application development and the versatility of the Akamai Cloud Platform makes it well-suited for a wide range of software development requirements. Securing applications in Akamai Cloud is no different than in any other public cloud platform.
+    The strength of the open standards in facilitating web application development and the versatility of the Akamai Cloud Platform makes it well-suited for a wide range of software development requirements. Securing applications in Akamai Cloud is no different than in any other public cloud platform.
 
 ### Change persona to Network/System Security Engineer
 
@@ -152,13 +155,13 @@ This repository is a demonstration highlighting how developers can leverage the 
 
 23. Investigate Nessus scan result
 
-   At the time of writing, Terrapin (CVE-2023-48795, identified on 18 December 2023) affecting SSH is detected as a medium-severity vulnerability. This is a common type of vulnerability across all public cloud platforms. Mitigation patches are available for addressing the vulnerability. However, as we leverage Kubernetes as the orchestration engine, access to worker nodes is not necessary. Turn off SSH by applying a daemonset via kubectl:
+    At the time of writing, Terrapin (CVE-2023-48795, identified on 18 December 2023) affecting SSH is detected as a medium-severity vulnerability. This is a common type of vulnerability across all public cloud platforms. Mitigation patches are available for addressing the vulnerability. However, as we leverage Kubernetes as the orchestration engine, access to worker nodes is not necessary. Turn off SSH by applying a daemonset via kubectl:
 
     ```bash
     kubectl apply -f ./disable-ssh.yml
     ```
    
-   Due to the Shared Responsibility Model in the Cloud, securing systems in Akamai Cloud is no different than in any other public cloud platform.
+    Due to the Shared Responsibility Model in the Cloud, securing systems in Akamai Cloud is no different than in any other public cloud platform.
 
 ## Disclaimer
 The deployment provided in this repository is minimal and intended for demonstration purposes only.
