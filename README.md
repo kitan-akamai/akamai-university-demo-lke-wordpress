@@ -108,7 +108,7 @@ This repository is a demonstration highlighting how developers can leverage the 
     ```bash
     ssh -L 61000:localhost:5901 -l root@[kali-ip-address]
     ```
-    Use your favourite VNC viewer or using Finder.
+    Use your favourite VNC viewer or Finder.
 
 14. Open terminal in Kali, start zaproxy
 
