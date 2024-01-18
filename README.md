@@ -12,7 +12,7 @@ This repository is a demonstration highlighting how developers can leverage the 
 ### 2. **Developer-Friendly Workflow:**
    - Showcase a seamless developer experience from code to deployment
    - Extensive APIs for integration with popular CI/CD tools for continuous deployment
-   - Intuitive graphic interface designed to enhance developers' productity
+   - Intuitive graphic interface designed to enhance developers' productivity
 
 ### 3 **Security Best Practices:**
    - Implement security best practices for cloud-native applications, indifferent from any other public cloud platform
@@ -145,13 +145,13 @@ This repository is a demonstration highlighting how developers can leverage the 
     systemctl start nessusd
     ```
 
-21. Access Nessus UI at [your-nessus-ip::8834]
+21. Access Nessus UI at <your-nessus-ip:8834>
 
     Follow the on-screen configurations, user are required to register to use Nessus Essentials. Allow a few minutes for the download and compilation of the latest plugins before initiating a new scan.
 
 22. Initiate a Network Scan against LKE worker nodes
    
-   <img src="docs/images/nessus_scan.png" alt="nessus_scan" style="width:auto;height:auto;">
+    <img src="docs/images/nessus_scan.png" alt="nessus_scan" style="width:auto;height:auto;">
 
 23. Investigate Nessus scan result
 
