@@ -1,7 +1,7 @@
 # Akamai University Compute Demo 
 <img src="docs/images/akamai_university.png" alt="Akamai" style="display: block; margin-left: auto; margin-right: auto; width:auto; height:200px">
 
-This repository is a demonstration highlighting how developers can leverage the core primitives of Akamai/Linode Cloud Platforms to seamlessly deploy cloud-native applications. Offering a glimpse into a day in the life of a software developer or cloud engineer, this demo covers key aspects such as app deployment, containerization, security, networking, Linode Cloud Manager, and Infrastructure-as-Code in less than 15 minutes hands-on session.
+This repository is a demonstration highlighting how developers can leverage the core primitives of Akamai/Linode cloud platform to seamlessly deploy cloud-native applications. Offering a glimpse into a day in the life of a software developer or cloud engineer, this demo covers key aspects such as app deployment, containerization, security, networking, Linode Cloud Manager, and Infrastructure-as-Code in less than 15 minutes hands-on session.
 
 ## Features
 
@@ -40,7 +40,7 @@ This repository is a demonstration highlighting how developers can leverage the 
 
 2. Execute Terraform 
 
-   Review the Terraform script, designed to deploy a LKE cluster with three worker nodes and a Cluster Autoscaler configured to scale up to a maximum of 10 nodes. The script utilizes the Helm provider to  deploy containerized software packages (WordPress and MariaDB). In less than 30 lines, you can have a fully operational 3-tier application running on Kubernetes. Having an understanding of the APIs, you can extend the CI/CD integration from this point and seamlessly execute a full suite of DevOps tasks that are beyond the scope of this demo.
+   Review the Terraform script, which is to deploy a LKE cluster with three worker nodes and a Cluster Autoscaler configured to scale up to a maximum of 10 nodes. The script utilizes the Helm provider to  deploy containerized software packages (WordPress and MariaDB). In less than 30 lines, you can have a fully operational 3-tier application running on Kubernetes. Having an understanding of the APIs, you can extend the CI/CD integration from this point and seamlessly execute a full suite of DevOps tasks that are beyond the scope of this demo.
 
    ```bash
    export TF_VAR_linode_token="your-token-goes-here"
