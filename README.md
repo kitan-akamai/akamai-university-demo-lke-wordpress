@@ -1,5 +1,5 @@
-<img src="docs/images/akamai.png" alt="Akamai" style="display: block; margin-left: auto; margin-right: auto; width:auto; height:auto;">
 # Akamai University Compute Demo 
+<img src="docs/images/akamai.png" alt="Akamai" style="display: block; margin-left: auto; margin-right: auto; width:auto; height:200px">
 
 This repository is a demonstration highlighting how developers can leverage the core primitives of Akamai/Linode Cloud Platforms to seamlessly deploy cloud-native applications. Offering a glimpse into a day in the life of a software developer or cloud engineer, this demo covers key aspects such as app deployment, containerization, security, networking, Linode Cloud Manager, and Infrastructure-as-Code in less than 15 minutes hands-on session.
 
