@@ -128,7 +128,7 @@ This repository is a demonstration highlighting how developers can leverage the 
 
 17. SSH into Ubuntu using Terminal
     ```bash
-    ssh root@[kali-ip-address]
+    ssh root@[ubuntu-ip-address]
     apt update
     ```
 
