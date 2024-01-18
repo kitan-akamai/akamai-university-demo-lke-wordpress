@@ -148,7 +148,7 @@ This repository is a demonstration highlighting how developers can leverage the 
     systemctl start nessusd
     ```
 
-21. Access Nessus UI at <your-nessus-ip:8834>
+21. Access Nessus UI at [your-nessus-ip:8834]
 
     Follow the on-screen configurations, user are required to register to use Nessus Essentials. Allow a few minutes for the download and compilation of the latest plugins before initiating a new scan.
 
