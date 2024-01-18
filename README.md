@@ -116,7 +116,7 @@ This repository is a demonstration highlighting how developers can leverage the 
 
     <img src="docs/images/zaproxy.png" alt="zaproxy" style="width:auto;height:auto;">
 
-15. Launch an automated scan attack against the WordPress application
+15. Launch an automated scan attack against the WordPress application and review the results
 
     The strength of the open standards in facilitating web application development and the versatility of the Akamai Cloud Platform makes it well-suited for a wide range of software development requirements. Securing applications on Akamai Cloud is no different than in any other public cloud platform.
 
