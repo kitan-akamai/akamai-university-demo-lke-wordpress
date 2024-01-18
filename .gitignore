@@ -1,0 +1,33 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+.terafform.lock.hcl
+
+# Logs
+log/*.log*
+
+# VS Code 
+.vscode/
+*.code-workspace
+
+# Others
+.DS_Store
+Thumbs.db
+.ruff_cache/
+
+# Kubeconfig
+*-kubeconfig.yaml
+
+# gitignore
+.gitignore
