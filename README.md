@@ -61,7 +61,7 @@ This repository is a demonstration highlighting how developers can leverage the 
 
 4. Access the WordPress web application
 
-   <img src="docs/images/wordpress.png" alt="nessus_scan" style="width:auto;height:500px;">
+   <img src="docs/images/wordpress.png" alt="nessus_scan" style="width:auto;height:auto">
 
 ### Change persona to Application Security
 
@@ -116,7 +116,7 @@ This repository is a demonstration highlighting how developers can leverage the 
 
 14. Open terminal in Kali, start zaproxy
 
-    <img src="docs/images/zaproxy.png" alt="zaproxy" style="width:auto;height:500px">
+    <img src="docs/images/zaproxy.png" alt="zaproxy" style="width:auto;height:auto">
 
 15. Launch an automated scan attack against the WordPress application and review the result
 
@@ -157,7 +157,7 @@ This repository is a demonstration highlighting how developers can leverage the 
 
 22. Initiate a Network Scan against LKE worker nodes
    
-    <img src="docs/images/nessus_scan.png" alt="nessus_scan" style="width:auto;height:500px">
+    <img src="docs/images/nessus_scan.png" alt="nessus_scan" style="width:auto;height:auto">
 
 23. Investigate Nessus scan result
 
