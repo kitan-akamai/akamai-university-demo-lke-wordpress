@@ -24,7 +24,7 @@ resource "linode_lke_cluster" "wordpress-cluster" {
 resource "helm_release" "wordpress" {
   name       = var.helm_deployment_label
   chart      = "./helm-charts/wordpress"
-  depends_on = [linode_lke_cluster.wordpress-cluster]
+  depends_on = [null_resource.save_kubeconfig]
 }
 
 output "kubeconfig" {
