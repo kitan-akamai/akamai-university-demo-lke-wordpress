@@ -137,9 +137,9 @@ This repository is a demonstration highlighting how developers can leverage the 
     ```
 
 15. Start VNC Server to create initial configuration
-   ```bash
-   tightvncserver
-   ```
+    ```bash
+    tightvncserver
+    ```
 
 16. Modify VNC Server configuration
     ```bash
