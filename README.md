@@ -118,23 +118,23 @@ This repository is a demonstration highlighting how developers can leverage the 
 
 11. Create a new Kali instance using Cloud Manager UI
    
-   Take the opportunity to familiarise with the functionalities of VPC, Firewall, Cloud Regions, and an intuitive Cloud Manager UI designed for enhanced productivity, offering a streamlined experience with reduced complexity for developers.
+    Take the opportunity to familiarise with the functionalities of VPC, Firewall, Cloud Regions, and an intuitive Cloud Manager UI designed for enhanced productivity, offering a streamlined experience with reduced complexity for developers.
 
 12. SSH into Kali using Terminal
-   ```bash
-   ssh root@[kali-ip-address]
-   apt update
-   ```
+    ```bash
+    ssh root@[kali-ip-address]
+    apt update
+    ```
 
 13. Install TightVNC, XFCE4
-   ```bash
-   apt install tightvncserver xfce4 -y
-   ```
+    ```bash
+    apt install tightvncserver xfce4 -y
+    ```
 
 14. Install Zed Attack Proxy (or any other web application security testing tool such as Burpsuite or Nikto)
-   ```bash
-   apt install zaproxy -y
-   ```
+    ```bash
+    apt install zaproxy -y
+    ```
 
 15. Start VNC Server to create initial configuration
    ```bash
