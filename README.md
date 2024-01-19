@@ -63,103 +63,154 @@ This repository is a demonstration highlighting how developers can leverage the 
 
    <img src="docs/images/wordpress.png" alt="nessus_scan" style="width:auto;height:auto">
 
-### Change persona to Application Security
+### Change persona to Application Load Testing
 
-5. Create a new Kali instance using Cloud Manager UI
+5. Create a new Ubuntu instance using Cloud Manager UI
    
    Take the opportunity to familiarise with the functionalities of VPC, Firewall, Cloud Regions, and an intuitive Cloud Manager UI designed for enhanced productivity, offering a streamlined experience with reduced complexity for developers.
 
-6. SSH into Kali using Terminal
+6. SSH into Ubuntu using Terminal
+    ```bash
+    ssh root@[ubuntu-ip-address]
+    apt update
+    ```
+
+7. Download and install K6 (or any other load testing tool)
+    ```bash
+    gpg -k
+    gpg --no-default-keyring --keyring /usr/share/keyrings/k6-archive-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C5AD17C747E3415A3642D57D77C6C491D6AC1D69
+    echo "deb [signed-by=/usr/share/keyrings/k6-archive-keyring.gpg] https://dl.k6.io/deb stable main" | sudo tee /etc/apt/sources.list.d/k6.list
+    apt-get update
+    apt-get install k6
+    ```
+
+8. Create a new K6 test script
+    ```bash
+    nano loadtest.js
+    ```
+
+9. Create a new K6 test script
+    ```bash
+    import http from 'k6/http';
+    import { sleep } from 'k6';
+    export const options = {
+      discardResponseBodies: true,
+      scenarios: {
+        contacts: {
+          executor: 'constant-vus',
+          vus: 50,
+          duration: '60s',
+        }
+      },
+    };
+    export default function () {
+        let response = http.get(`http://${__ENV.URL}/`);
+    //    console.log(`Response status code: ${response.status}`);
+    }
+    ```
+
+10. Execute test script
+    ```bash
+    k6 run -e URL=<wordpress-service-ip-goes-here> loadtest.js
+    ```
+
+### Change persona to Application Security
+
+11. Create a new Kali instance using Cloud Manager UI
+   
+   Take the opportunity to familiarise with the functionalities of VPC, Firewall, Cloud Regions, and an intuitive Cloud Manager UI designed for enhanced productivity, offering a streamlined experience with reduced complexity for developers.
+
+12. SSH into Kali using Terminal
    ```bash
    ssh root@[kali-ip-address]
    apt update
    ```
 
-7. Install TightVNC, XFCE4
+13. Install TightVNC, XFCE4
    ```bash
    apt install tightvncserver xfce4 -y
    ```
 
-8. Install Zed Attack Proxy (or any other web application security testing tool such as Burpsuite or Nikto)
+14. Install Zed Attack Proxy (or any other web application security testing tool such as Burpsuite or Nikto)
    ```bash
    apt install zaproxy -y
    ```
 
-9. Start VNC Server to create initial configuration
+15. Start VNC Server to create initial configuration
    ```bash
    tightvncserver
    ```
 
-10. Modify VNC Server configuration
+16. Modify VNC Server configuration
     ```bash
     tightvncserver -kill :1
     nano ~/.vnc/xstartup
     ```
 
-11. Add XFCE as desktop environment
+17. Add XFCE as desktop environment
     ```bash
     #!/bin/sh
     xrdb $HOME/.Xresources
     startxfce4 &
     ```
 
-12. Start VNC server 
+18. Start VNC server 
     ```bash
     tightvncserver
     ```
 
-13. Create an SSH tunnel in a new terminal and connect to Kali via VNC
+19. Create an SSH tunnel in a new terminal and connect to Kali via VNC
     ```bash
     ssh -L 61000:localhost:5901 -l root [kali-ip-address]
     ```
     Use your favourite VNC viewer or Finder.
 
-14. Open terminal in Kali, start zaproxy
+20. Open terminal in Kali, start zaproxy
 
     <img src="docs/images/zaproxy.png" alt="zaproxy" style="width:auto;height:auto">
 
-15. Launch an automated scan attack against the WordPress application and review the result
+21. Launch an automated scan attack against the WordPress application and review the result
 
     The strength of the open standards in facilitating web application development and the versatility of the Akamai Cloud Platform makes it well-suited for a wide range of software development requirements. Securing applications on Akamai Cloud is no different than in any other public cloud platform.
 
 ### Change persona to Network/System Security Engineer
 
-16. Create a new Ubuntu instance using Cloud Manager UI
+22. Create a new Ubuntu instance using Cloud Manager UI
 
     Take the opportunity to familiarise with the functionalities of VPC, Firewall, Cloud Regions, and an intuitive Cloud Manager UI designed for enhanced productivity, offering a streamlined experience with reduced complexity for developers.
 
-17. SSH into Ubuntu using Terminal
+23. SSH into Ubuntu using Terminal
     ```bash
     ssh root@[ubuntu-ip-address]
     apt update
     ```
 
-18. Download Nessus package (or any other vulnerability scanning tool such as OpenVAS or Nexpose)
+24. Download Nessus package (or any other vulnerability scanning tool such as OpenVAS or Nexpose)
     ```bash
     curl --request GET \
     --url 'https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.6.4-ubuntu1404_amd64.deb' \
     --output 'Nessus-10.6.4-ubuntu1404_amd64.deb'
     ```
 
-19. Install Nessus
+25. Install Nessus
     ```bash
     dpkg -i Nessus-10.6.4-ubuntu1404_amd64.deb
     ```
 
-20. Start Nessus
+26. Start Nessus
     ```bash
     systemctl start nessusd
     ```
 
-21. Access Nessus UI at [your-nessus-ip:8834]
+27. Access Nessus UI at [your-nessus-ip:8834]
 
     Follow the on-screen configurations, user are required to register to use Nessus Essentials. Allow a few minutes for the download and compilation of the latest plugins before initiating a new scan.
 
-22. Initiate a Network Scan against LKE worker nodes
+28. Initiate a Network Scan against LKE worker nodes
    
     <img src="docs/images/nessus_scan.png" alt="nessus_scan" style="width:auto;height:auto">
 
-23. Investigate Nessus scan result
+29. Investigate Nessus scan result
 
     At the time of writing, Terrapin (CVE-2023-48795, identified on 18 December 2023) affecting SSH is detected as a medium-severity vulnerability. This is a common type of vulnerability across all public cloud platforms. Mitigation patches are available for addressing the vulnerability. However, as we leverage Kubernetes as the orchestration engine, there's no need to SSH into individual worker nodes. Host actions on every worker node can be executed via a daemonset. To disable SSH, apply the following daemonset:
 
