@@ -14,3 +14,4 @@ export default function () {
     let response = http.get(`http://${__ENV.URL}/`);
 //    console.log(`Response status code: ${response.status}`);
 }
+
