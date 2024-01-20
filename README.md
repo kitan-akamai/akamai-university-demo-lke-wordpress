@@ -24,7 +24,7 @@ This repository is a demonstration highlighting how developers can leverage the 
 
 ## Prerequisites
 
-- Linode account, can be created via  https://login.linode.com/signup 
+- Linode account, can be created via https://login.linode.com/signup 
 - Linode Personal Access Token
 - Git CLI
 - Terraform CLI
