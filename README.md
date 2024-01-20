@@ -161,7 +161,7 @@ This repository is a demonstration highlighting how developers can leverage the 
 
 19. Create an SSH tunnel in a new terminal and connect to Kali via VNC:
     ```bash
-    ssh -L 61000:localhost:5901 -l root [kali-ip-address]
+    ssh -L 50000:localhost:5901 -l root [kali-ip-address]
     ```
     Use your favourite VNC viewer or Finder.
 
