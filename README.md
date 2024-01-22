@@ -6,7 +6,7 @@ This repository is a demonstration highlighting how developers can leverage the 
 ## Features
 
 ### 1. **Cloud-Native Application Deployment:**
-   - Deploy a sample cloud-native application (this demo use WordPress) showcasing Akamai Cloud Platform's core primitives
+   - Deploy a sample cloud-native application (this demo uses WordPress) showcasing Akamai Cloud Platform's core primitives
    - Showcase Kubernetes as the central tenet of cloud-native architecture to orchestrate, deploy, and auto-scale application workloads
 
 ### 2. **Developer-Friendly Workflow:**
